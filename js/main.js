@@ -426,3 +426,16 @@ function initMobileInteractions() {
 // Initialize mobile interactions
 window.addEventListener('resize', debounce(initMobileInteractions, 250));
 initMobileInteractions();
+<script>
+const btn = document.getElementById("ar-button");
+
+btn.addEventListener("click", () => {
+  const isIOS = /iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+  if(isIOS){
+    window.location.href = "modelo.usdz"; // tu archivo
+  } else {
+    window.location.href = "https://arvr.google.com/scene-viewer/1.0?file=modelo.glb&mode=ar_preferred";
+  }
+});
+</script>
