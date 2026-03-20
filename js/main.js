@@ -439,3 +439,7 @@ btn.addEventListener("click", () => {
   }
 });
 </script>
+  function activarAR() {
+  const viewer = document.querySelector("model-viewer");
+  viewer.activateAR();
+}
