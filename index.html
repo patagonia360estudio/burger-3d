@@ -70,15 +70,20 @@ Explora el plato antes de elegirlo
 <div class="viewer-box">
 
 <model-viewer 
-  src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
+  src="burga.glb"
   ios-src="burga.usdz"
   ar
     ar-modes="scene-viewer webxr quick-look"
     camera-controls
     auto-rotate
-    shadow-intensity="1"
-    style="width: 100%; height: 100px;"
-  >
+    exposure="1.2"
+    environment-image="neutral"
+    shadow-intensity="1" 
+    camera-orbit="0deg 75deg 2.5m"
+    camera-target="0m 0.5m 0m"
+    field-of-view="30deg"
+    
+   style="width: 100%; height: 100px;">
      <button slot="ar-button" class="ar-custom-btn">
       📱 Ver en tu espacio
     </button>
