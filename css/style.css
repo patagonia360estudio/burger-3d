@@ -1496,4 +1496,15 @@ body {
   display: block;
   text-align: center;
   width: 100%;
+}  
+ .viewer-box {
+  width: 90%;
+  max-width: 400px;
+  height: 350px; /* 🔥 CLAVE */
+  margin: 20px auto;
+
+  border-radius: 20px;
+  overflow: hidden;
+
+  background: rgba(255,255,255,0.05);
 }
