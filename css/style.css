@@ -1521,5 +1521,29 @@ body {
   margin-top: 10px;
   font-size: 18px;
   opacity: 0.7;
+} 
+
+.viewer-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo-container {
+  text-align: center;
+}
+
+.brand-sub {
+  text-align: center;
+}
+
+.ar-custom-btn {
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #00c2a8;
+  color: white;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: bold;
 }
 
