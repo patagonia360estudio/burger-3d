@@ -1360,10 +1360,12 @@ body {
     text-align: center;
   }
 
-  .brand-sub {
-    font-size: 14px;
-    margin-bottom: 20px;
-  }
+ .brand-sub {
+  display: block;
+  text-align: center;
+  width: 100%;
+  margin: 10px auto;
+}
 
   .hero-title {
     font-size: 22px;
@@ -1542,5 +1544,27 @@ body {
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
+}
+.cross-links {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn-secondary {
+  padding: 12px 20px;
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.btn-secondary:hover {
+  background: rgba(255,255,255,0.08);
+  transform: translateY(-2px);
 }
 
