@@ -67,15 +67,15 @@
         </p>
         
         <div class="flex flex-col md:flex-row gap-4 mb-16 z-10">
-            <a href="#demo-gastronomia" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform">Ver Demo Gastronómica</a>
+            <a href="resto.html" class="px-8 py-4 bg-white text-black font-semibold rounded-full hover:scale-105 transition-transform">Ver Demo Gastronómica</a>
             <a href="#contacto" class="px-8 py-4 glass text-white font-semibold rounded-full border border-white/20 hover:bg-white/10 transition">Contactar Estudio</a>
         </div>
 
         <div class="relative w-full max-w-6xl aspect-[16/9] md:aspect-[21/9] rounded-2xl glass overflow-hidden border border-white/10 shadow-2xl shadow-green-950/10">
             
             <model-viewer 
-                src="TU_MODELO_PRINCIPAL.glb" 
-                ios-src="TU_MODELO_PRINCIPAL.usdz"
+                src="burga.glb"
+                ios-src="burga.usdz"
                 alt="Modelo 3D interactivo de Patagonia 360"
                 ar 
                 ar-modes="webxr scene-viewer quick-look" 
@@ -147,8 +147,8 @@
             
             <div class="md:col-span-2 relative group overflow-hidden rounded-3xl aspect-[16/10] glass border border-white/10 shadow-2xl shadow-black/30">
                 <model-viewer 
-                    src="TU_MODELO_COMIDA.glb" 
-                    ios-src="TU_MODELO_COMIDA.usdz"
+                    src="burga.glb"
+                    ios-src="burga.usdz"
                     alt="Demo Gastronómica 3D"
                     ar camera-controls auto-rotate shadow-intensity="1.5" exposure="1.2">
                     <button slot="ar-button" id="ar-button">👋 VER EN TU MESA</button>
