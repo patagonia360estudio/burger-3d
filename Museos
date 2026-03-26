@@ -84,7 +84,21 @@ Ver cómo funciona
                     </div>
                     <div class="control-item">
                         <i class="fas fa-expand"></i>
-                        <span>Pantalla completa</span>
+                        <div style="text-align:center; margin-top:20px;">
+
+  <a href="https://sketchfab.com/models/6cfeaf1f7aaa424ba9507d207fe21339" 
+   target="_blank" 
+   class="cta-primary">
+
+📱 Ver en tu espacio (AR)
+
+</a>
+
+<p style="opacity:0.6; font-size:14px; margin-top:10px;">
+Disponible en dispositivos móviles compatibles
+</p>
+
+</div>
                     </div>
                 </div>
             </div>
