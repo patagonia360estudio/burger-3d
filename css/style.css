@@ -1566,5 +1566,41 @@ body {
 .btn-secondary:hover {
   background: rgba(255,255,255,0.08);
   transform: translateY(-2px);
+} 
+/* NAV mejor posicionado */
+nav {
+  position: fixed;
+  top: 15px;
+  right: 15px;
+  z-index: 1000;
 }
 
+/* HERO más equilibrado */
+.hero {
+  padding-top: 100px;
+}
+.hero-title,
+.hero-title {
+  letter-spacing: -1px; 
+}
+
+h1, h2 {
+  letter-spacing: -0.5px;
+    nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: #00c2a8; /* solo el activo */
+}
+    .ar-btn {
+  background: linear-gradient(135deg, #0f766e, #0d9488);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 14px;
+  font-size: 15px;
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
