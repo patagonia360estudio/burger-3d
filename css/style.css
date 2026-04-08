@@ -291,3 +291,10 @@ nav a.active {
 .cta-secondary:hover::after {
   left: 100%;
 }
+/* ============================= */
+/* BRANDING GLOBAL FIX */
+/* ============================= */
+
+/* títulos principales */
+h2, .section-title {
+  color: var(--patagonia
