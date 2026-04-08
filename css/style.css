@@ -247,3 +247,47 @@ nav a.active {
     flex-direction: column;
   }
 }
+/* ============================= */
+/* BOTONES PRO INTERACTIVOS */
+/* ============================= */
+
+.cta-primary,
+.cta-secondary {
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+/* efecto hover */
+.cta-primary:hover,
+.cta-secondary:hover {
+  transform: translateY(-4px) scale(1.02);
+}
+
+/* glow verde */
+.cta-primary:hover {
+  box-shadow: 0 10px 30px rgba(15,118,110,0.4);
+}
+
+/* glow dorado */
+.cta-secondary:hover {
+  box-shadow: 0 10px 30px rgba(194,163,107,0.4);
+}
+
+/* efecto “shine” */
+.cta-primary::after,
+.cta-secondary::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition: 0.6s;
+}
+
+.cta-primary:hover::after,
+.cta-secondary:hover::after {
+  left: 100%;
+}
