@@ -477,3 +477,14 @@ h2, .section-title {
 .cross-links a:hover {
   transform: scale(1.05);
 }
+  .video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media(max-width:768px){
+  .video-grid {
+    grid-template-columns: 1fr;
+  }
+}
