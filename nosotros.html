@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -8,7 +9,6 @@
 
 <link rel="stylesheet" href="css/style.css">
 
-<!-- model viewer correcto -->
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
@@ -25,7 +25,7 @@
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-content">
+<div class="hero-content reveal">
 
 <img src="img/LogoV2.png" class="hero-logo">
 
@@ -37,17 +37,12 @@ Experiencias digitales que transforman la forma de explorar
 </h2>
 
 <p class="hero-subtitle">
-Creamos soluciones en 3D, realidad aumentada y visualización interactiva para turismo, gastronomía, piezas de arte y patrimonio histórico.
+Creamos soluciones en 3D, realidad aumentada y visualización interactiva.
 </p>
 
 <div class="hero-buttons">
-<a href="resto.html" class="cta-primary">
-🍔 Ver Restaurante
-</a>
-
-<a href="museo.html" class="cta-secondary">
-🏛 Ver Museo
-</a>
+<a href="resto.html" class="cta-primary">🍔 Restaurante</a>
+<a href="museo.html" class="cta-secondary">🏛 Museo</a>
 </div>
 
 </div>
@@ -55,21 +50,17 @@ Creamos soluciones en 3D, realidad aumentada y visualización interactiva para t
 
 <!-- VISOR -->
 <section class="main-viewer">
-<div class="container">
+<div class="container reveal">
 
 <h2 class="section-title">Explorá nuestra tecnología</h2>
-
-<div style="margin-top:40px;">
 
 <model-viewer 
 src="burga.glb"
 ios-src="burga.usdz"
 ar
-ar-modes="scene-viewer quick-look webxr"
 camera-controls
 auto-rotate
-interaction-prompt="auto"
-style="width:100%; height:400px; border-radius:20px;"
+style="width:100%; height:400px;"
 >
 
 <button slot="ar-button" class="ar-btn">
@@ -79,39 +70,19 @@ style="width:100%; height:400px; border-radius:20px;"
 </model-viewer>
 
 </div>
-
-</div>
-</section>
-
-<!-- LINKS -->
-<section style="text-align:center; margin-top:60px;">
-
-<p>También podés explorar nuestras experiencias:</p>
-
-<div style="margin-top:20px;">
-<a href="resto.html">🍔 Restaurante</a> |
-<a href="museo.html">🏛 Museo</a> |
-<a href="index.html">🏠 Inicio</a>
-</div>
-
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
 <div class="container">
 
-<img src="img/logoMed.png" style="width:70px; margin-bottom:15px;">
-
-<p class="footer-text">
-Patagonia 360 – Estudio de Imágenes
-</p>
-
-<p>
-Bariloche | Experiencias 3D y realidad aumentada
-</p>
+<img src="img/logoMed.png" style="width:70px;">
+<p>Patagonia 360 – Estudio de Imágenes</p>
 
 </div>
 </footer>
+
+<script src="main.js"></script>
 
 </body>
 </html>
