@@ -410,3 +410,70 @@ h2, .section-title {
   opacity: 1;
   transform: translateY(0);
 }
+  /* ========================= */
+/* TARJETAS PRO (branding) */
+/* ========================= */
+
+.step-card,
+.feature-card {
+  background: linear-gradient(145deg, #0f1f35, #0a1729);
+  border-radius: 20px;
+  padding: 30px;
+  transition: 0.3s;
+  border: 1px solid rgba(255,255,255,0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* borde animado Patagonia */
+.step-card::before,
+.feature-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 20px;
+  padding: 1px;
+  background: linear-gradient(120deg, #00c2a8, #d4af37);
+  -webkit-mask: 
+    linear-gradient(#000 0 0) content-box, 
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transition: 0.3s;
+}
+
+.step-card:hover::before,
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+/* hover */
+.step-card:hover,
+.feature-card:hover {
+  transform: translateY(-8px) scale(1.02);
+}
+
+/* ========================= */
+/* BOTONES CROSS LINKS */
+/* ========================= */
+
+.cross-links {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.cross-links a {
+  display: inline-block;
+  padding: 14px 30px;
+  border-radius: 40px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.cross-links a:hover {
+  transform: scale(1.05);
+}
