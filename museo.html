@@ -8,6 +8,7 @@
 <title>Patagonia 360 | Museo 3D</title>
 
 <link rel="stylesheet" href="css/style.css">
+
 <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
 
 </head>
@@ -24,7 +25,7 @@
 
 <!-- HERO -->
 <section class="hero">
-<div class="hero-content">
+<div class="hero-content reveal">
 
 <img src="img/LogoV2.png" class="hero-logo">
 
@@ -34,7 +35,7 @@
 <h2 class="hero-title">Digitalización del patrimonio</h2>
 
 <p class="hero-subtitle">
-Explorá piezas históricas en 3D sin manipularlas.
+Explorá piezas reales en 3D y realidad aumentada sin manipularlas.
 </p>
 
 <div class="hero-buttons">
@@ -47,7 +48,10 @@ Explorá piezas históricas en 3D sin manipularlas.
 
 <!-- MODELO -->
 <section id="modelo">
-<div class="container">
+<div class="container reveal">
+
+<h2 class="section-title">Pieza digitalizada en 3D</h2>
+<p class="section-subtitle">Interactuá con el modelo y visualizalo en tu espacio</p>
 
 <model-viewer 
 src="diente.glb"
@@ -55,7 +59,12 @@ ios-src="diente.usdz"
 ar
 camera-controls
 auto-rotate
-style="width:100%; height:400px;">
+style="width:100%; height:420px;">
+
+<button slot="ar-button" class="ar-btn">
+📱 Ver en tu espacio
+</button>
+
 </model-viewer>
 
 </div>
@@ -63,7 +72,7 @@ style="width:100%; height:400px;">
 
 <!-- COMO FUNCIONA -->
 <section id="como">
-<div class="container">
+<div class="container reveal">
 
 <h2 class="section-title">Cómo funciona</h2>
 
@@ -71,17 +80,17 @@ style="width:100%; height:400px;">
 
 <div class="step-card">
 <h3>Escaneo 3D</h3>
-<p>Digitalizamos piezas reales.</p>
+<p>Digitalizamos piezas reales con alta precisión.</p>
 </div>
 
 <div class="step-card">
-<h3>Acceso digital</h3>
-<p>Desde QR o pantallas.</p>
+<h3>Acceso interactivo</h3>
+<p>Disponible mediante QR o pantallas.</p>
 </div>
 
 <div class="step-card">
-<h3>Exploración</h3>
-<p>Interacción sin tocar.</p>
+<h3>Exploración libre</h3>
+<p>Rotar, acercar y analizar sin tocar la pieza original.</p>
 </div>
 
 </div>
@@ -89,48 +98,91 @@ style="width:100%; height:400px;">
 </div>
 </section>
 
-<!-- CASO MEGALODON -->
+<!-- CASO REAL -->
 <section>
-<div class="container">
+<div class="container reveal">
 
-<h2 class="section-title">Caso real – Megalodon AR</h2>
+<h2 class="section-title">Caso real – Megalodon en AR</h2>
+<p class="section-subtitle">Museo en Comallo, Río Negro</p>
 
 <div class="video-grid">
 
-<video controls><source src="meg1.mp4"></video>
-<video controls><source src="meg2.mp4"></video>
-<video controls><source src="meg3.mp4"></video>
+<video autoplay muted loop playsinline controls preload="auto">
+  <source src="meg1.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline controls preload="auto">
+  <source src="meg2.mp4" type="video/mp4">
+</video>
+
+<video autoplay muted loop playsinline controls preload="auto">
+  <source src="meg3.mp4" type="video/mp4">
+</video>
 
 </div>
+
+<p style="text-align:center; margin-top:20px; opacity:0.7;">
+Implementación real de realidad aumentada en entorno museológico
+</p>
 
 </div>
 </section>
 
-<!-- CTA -->
-<section style="text-align:center; margin-top:120px;">
+<!-- PROPUESTA -->
+<section class="cta-final">
 
-<h2 class="hero-title">Llevá tu museo al siguiente nivel</h2>
+<div class="container">
+
+<h2 class="hero-title">
+Llevá tu museo al siguiente nivel
+</h2>
 
 <p class="hero-subtitle">
-Creamos experiencias interactivas para turismo y cultura.
+Creamos experiencias interactivas que aumentan el valor educativo y la experiencia del visitante.
 </p>
 
 <div class="hero-buttons">
-<a href="https://wa.me/542944931548" class="cta-primary">📲 Contactar</a>
+<a href="https://wa.me/5492944931548" class="cta-primary">
+📲 Contactar
+</a>
 </div>
 
-<div class="hero-buttons" style="margin-top:40px;">
+<div class="hero-buttons secondary-links">
 <a href="resto.html" class="cta-secondary">🍔 Restaurante</a>
 <a href="nosotros.html" class="cta-secondary">🔍 Nosotros</a>
+</div>
+
 </div>
 
 </section>
 
 <!-- FOOTER -->
 <footer class="footer">
-<img src="img/logoMed.png" style="width:70px;">
-<p>Patagonia 360 – Bariloche</p>
+<div class="container">
+
+<img src="img/logoMed.png" class="logo-footer">
+
+<p>Patagonia 360 – Estudio de Imágenes</p>
+<p style="opacity:0.6;">Bariloche | Experiencias 3D y realidad aumentada</p>
+
+</div>
 </footer>
+
+<!-- ANIMACIONES -->
+<script>
+const reveals = document.querySelectorAll(".reveal");
+
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const windowHeight = window.innerHeight;
+    const elementTop = el.getBoundingClientRect().top;
+
+    if (elementTop < windowHeight - 100) {
+      el.classList.add("active");
+    }
+  });
+});
+</script>
 
 </body>
 </html>
