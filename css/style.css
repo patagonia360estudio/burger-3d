@@ -50,8 +50,9 @@ nav a.active {
 
 /* LOGO */
 .hero-logo {
-  width: 90px;
-  margin-bottom: 20px;
+  width: 140px;
+  margin-bottom: 25px;
+  filter: drop-shadow(0 5px 15px rgba(212,175,55,0.3));
 }
 
 /* TITULOS */
