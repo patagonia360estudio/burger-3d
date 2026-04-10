@@ -54,11 +54,15 @@ Explorá piezas reales en 3D y realidad aumentada sin manipularlas.
 <p class="section-subtitle">Interactuá con el modelo y visualizalo en tu espacio</p>
 
 <model-viewer 
-src="diente.glb"
-ios-src="diente.usdz"
+src="modelos/diente.glb"
+ios-src="modelos/diente.usdz"
 ar
+ar-modes="scene-viewer quick-look webxr"
 camera-controls
 auto-rotate
+exposure="1"
+shadow-intensity="1"
+interaction-prompt="auto"
 style="width:100%; height:420px;">
 
 <button slot="ar-button" class="ar-btn">
