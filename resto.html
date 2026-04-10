@@ -10,6 +10,9 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
+<!-- 🔥 IMPORTANTE -->
+<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 </head>
 
 <body>
@@ -54,8 +57,6 @@ Mostrá tus platos en 3D y realidad aumentada antes de que el cliente los pida.
 El cliente ve exactamente lo que va a recibir
 </p>
 
-<div class="viewer-box">
-
 <model-viewer 
 src="modelos/burga.glb"
 ios-src="modelos/burga.usdz"
@@ -74,10 +75,8 @@ style="width:100%; height:420px;">
 
 </model-viewer>
 
-</div>
-
 <div style="text-align:center; margin-top:20px;">
-<a href="burga.usdz" rel="ar" class="cta-primary">
+<a href="modelos/burga.usdz" rel="ar" class="cta-primary">
 📱 Ver en tu espacio
 </a>
 </div>
@@ -201,6 +200,9 @@ window.addEventListener("scroll", () => {
   });
 });
 </script>
+
+</body>
+</html>
 
 </body>
 </html>
