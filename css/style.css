@@ -275,3 +275,6 @@ model-viewer {
     width: 140px;
   }
 }
+model-viewer {
+  background: radial-gradient(circle, #0e2238 0%, #0b1c2c 100%);
+}
