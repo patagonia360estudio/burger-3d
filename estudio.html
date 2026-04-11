@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -9,12 +8,118 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<style>
+
+/* HERO */
+.estudio-hero {
+    text-align: center;
+    padding: 120px 20px 80px;
+}
+
+.estudio-hero h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.estudio-hero p {
+    opacity: 0.7;
+    letter-spacing: 2px;
+}
+
+/* SECCIONES */
+.estudio-section {
+    max-width: 1200px;
+    margin: 80px auto;
+    padding: 0 20px;
+}
+
+.estudio-title {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.estudio-sub {
+    opacity: 0.6;
+    margin-bottom: 30px;
+}
+
+/* VIDEO */
+.video-box {
+    border-radius: 20px;
+    overflow: hidden;
+    background: #0f172a;
+    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+}
+
+video {
+    width: 100%;
+    display: block;
+}
+
+/* GRID 3 columnas */
+.estudio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 60px;
+}
+
+@media(min-width: 900px){
+    .estudio-grid {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+/* CARDS */
+.estudio-card {
+    transition: 0.4s;
+}
+
+.estudio-card:hover {
+    transform: translateY(-10px);
+}
+
+/* BOTONES */
+.estudio-btns {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.btn-main {
+    background: linear-gradient(135deg, #10b981, #059669);
+    padding: 14px 30px;
+    border-radius: 40px;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-outline {
+    border: 1px solid #d4af37;
+    padding: 14px 30px;
+    border-radius: 40px;
+    margin: 10px;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.btn-main:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(16,185,129,0.5);
+}
+
+.btn-outline:hover {
+    transform: scale(1.05);
+    background: rgba(212,175,55,0.1);
+}
+
+</style>
+
 </head>
 
 <body>
 
 <!-- NAV -->
-<nav style="position:fixed; top:20px; right:20px; z-index:1000;">
+<nav style="position:fixed; top:20px; right:20px;">
 <a href="index.html">Inicio</a>
 <a href="resto.html">Restaurante</a>
 <a href="museo.html">Museo</a>
@@ -22,121 +127,88 @@
 </nav>
 
 <!-- HERO -->
-<section class="hero">
-<div class="hero-content">
+<section class="estudio-hero">
+<h1>Patagonia 360</h1>
+<p>ESTUDIO DE IMÁGENES</p>
 
-<img src="img/LogoV2.png" class="hero-logo">
-
-<h1 class="brand-title">Patagonia 360</h1>
-<p class="brand-sub">Estudio de Imágenes</p>
-
-<h2 class="hero-title">
-Producción audiovisual + tecnología inmersiva
+<h2 style="margin-top:30px;">
+Producción visual, tecnología 3D y experiencias inmersivas
 </h2>
+</section>
 
-<p class="hero-subtitle">
-Creamos contenido visual de alto impacto para turismo, marcas y experiencias interactivas.
+<!-- GRID PRINCIPAL -->
+<section class="estudio-section">
+
+<div class="estudio-grid">
+
+<!-- INMOBILIARIA -->
+<div class="estudio-card">
+
+<h3 class="estudio-title">Desarrollos inmobiliarios</h3>
+<p class="estudio-sub">
+Visualización, drone, 360 y contenido para proyectos
 </p>
 
-</div>
-</section>
-
-<!-- VIDEO HERO -->
-<section class="main-viewer">
-<div class="container">
-
-<h2 class="section-title">Producción audiovisual</h2>
-
-<div class="viewer-box">
-
+<div class="video-box">
 <video autoplay muted loop playsinline>
-  <source src="videos/demo-render.mp4" type="video/mp4">
+<source src="videos/clip-inmo1.mp4" type="video/mp4">
 </video>
-
-</div>
-
-</div>
-</section>
-
-<!-- SERVICIOS -->
-<section class="features">
-<div class="container">
-
-<h2 class="section-title">Servicios</h2>
-
-<div class="features-grid">
-
-<div class="feature-card">
-<h3>Filmación con drone</h3>
-<p>Tomas aéreas en alta calidad para turismo y eventos.</p>
-</div>
-
-<div class="feature-card">
-<h3>Producción deportiva</h3>
-<p>Cobertura de actividades como kite, SUP, trail y montaña.</p>
-</div>
-
-<div class="feature-card">
-<h3>Escaneo 3D</h3>
-<p>Digitalización de objetos y espacios.</p>
-</div>
-
-<div class="feature-card">
-<h3>Realidad aumentada</h3>
-<p>Experiencias interactivas para clientes y visitantes.</p>
 </div>
 
 </div>
 
-</div>
-</section>
+<!-- TURISMO -->
+<div class="estudio-card">
 
-<!-- GALERIA SIMPLE -->
-<section class="main-viewer">
-<div class="container">
+<h3 class="estudio-title">Turismo y destinos</h3>
+<p class="estudio-sub">
+Experiencias visuales en paisajes y actividades
+</p>
 
-<h2 class="section-title">Contenido real</h2>
-
-<div class="video-grid">
-
-<video controls>
-  <source src="videos/drone.mp4" type="video/mp4">
+<div class="video-box">
+<video autoplay muted loop playsinline>
+<source src="videos/viajes y bicicleta1.mp4" type="video/mp4">
 </video>
+</div>
 
-<video controls>
-  <source src="videos/deportes.mp4" type="video/mp4">
+</div>
+
+<!-- MARCAS -->
+<div class="estudio-card">
+
+<h3 class="estudio-title">Marcas y contenido</h3>
+<p class="estudio-sub">
+Producción audiovisual para campañas y branding
+</p>
+
+<div class="video-box">
+<video autoplay muted loop playsinline>
+<source src="videos/demo-render.mp4" type="video/mp4">
 </video>
-
 </div>
 
 </div>
+
+</div>
+
 </section>
 
 <!-- CTA -->
-<section style="text-align:center; margin:60px 0;">
+<div class="estudio-btns">
 
-<h2>Trabajemos juntos</h2>
-
-<p style="opacity:0.7;">
-Soluciones visuales para empresas, turismo y proyectos culturales.
-</p>
-
-<br>
-
-<a href="nosotros.html" class="cta-primary">
-Contactar
+<a href="resto.html" class="btn-main">
+🍔 Ver experiencia gastronómica
 </a>
 
-</section>
+<a href="museo.html" class="btn-outline">
+🏛 Ver experiencia museo
+</a>
 
-<!-- FOOTER -->
-<footer class="footer">
-<div class="container">
-
-<p>Patagonia 360 – Bariloche</p>
+<a href="nosotros.html" class="btn-outline">
+🔍 Sobre Patagonia 360
+</a>
 
 </div>
-</footer>
 
 </body>
 </html>
