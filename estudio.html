@@ -8,108 +8,163 @@
 
 <link rel="stylesheet" href="css/style.css">
 
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Cormorant+Garamond:ital,wght@0,300;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+
 <style>
 
+body{
+background:#020617;
+color:#f0f4f8;
+font-family:'DM Sans',sans-serif;
+}
+
+/* NAV */
+nav{
+position:fixed;
+top:0;
+left:0;
+right:0;
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 5%;
+background:rgba(2,6,23,.85);
+backdrop-filter:blur(16px);
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:15px;
+opacity:.7;
+}
+
+nav a.active{
+color:#d4af37;
+opacity:1;
+}
+
 /* HERO */
-.estudio-hero {
-    text-align: center;
-    padding: 120px 20px 80px;
+.hero{
+min-height:90vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+padding:120px 20px;
+background:linear-gradient(180deg,#0b1a2a,#020617);
 }
 
-.estudio-hero h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
+.hero-logo{
+width:110px;
+margin-bottom:20px;
 }
 
-.estudio-hero p {
-    opacity: 0.7;
-    letter-spacing: 2px;
+.brand-title{
+font-family:'Syne';
+font-size:48px;
+font-weight:800;
+background:linear-gradient(145deg,#fff,#d4af37);
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
 }
 
-/* SECCIONES */
-.estudio-section {
-    max-width: 1200px;
-    margin: 80px auto;
-    padding: 0 20px;
+.brand-sub{
+font-family:'Cormorant Garamond';
+font-style:italic;
+opacity:.7;
+margin-bottom:20px;
 }
 
-.estudio-title {
-    font-size: 28px;
-    margin-bottom: 10px;
+.hero-title{
+font-size:26px;
+margin-top:20px;
 }
 
-.estudio-sub {
-    opacity: 0.6;
-    margin-bottom: 30px;
+/* GRID */
+.section{
+max-width:1200px;
+margin:80px auto;
+padding:0 20px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:1fr;
+gap:40px;
+}
+
+@media(min-width:900px){
+.grid{
+grid-template-columns:1fr 1fr 1fr;
+}
+}
+
+/* CARD */
+.card{
+background:rgba(11,26,42,.8);
+border:1px solid rgba(212,175,55,.15);
+border-radius:20px;
+padding:20px;
+transition:.4s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+box-shadow:0 20px 60px rgba(0,0,0,.5);
+}
+
+.card h3{
+color:#d4af37;
+margin-bottom:10px;
+}
+
+.card p{
+opacity:.7;
+margin-bottom:15px;
 }
 
 /* VIDEO */
-.video-box {
-    border-radius: 20px;
-    overflow: hidden;
-    background: #0f172a;
-    box-shadow: 0 0 40px rgba(0,0,0,0.4);
+.video-box{
+border-radius:15px;
+overflow:hidden;
 }
 
-video {
-    width: 100%;
-    display: block;
+video{
+width:100%;
 }
 
-/* GRID 3 columnas */
-.estudio-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 60px;
+/* CTA LINKS */
+.links{
+text-align:center;
+margin:80px 0;
 }
 
-@media(min-width: 900px){
-    .estudio-grid {
-        grid-template-columns: 1fr 1fr 1fr;
-    }
+.btn{
+display:inline-block;
+padding:14px 30px;
+border-radius:40px;
+margin:10px;
+text-decoration:none;
 }
 
-/* CARDS */
-.estudio-card {
-    transition: 0.4s;
+.btn-main{
+background:#10b981;
+color:white;
 }
 
-.estudio-card:hover {
-    transform: translateY(-10px);
+.btn-outline{
+border:1px solid #d4af37;
+color:#d4af37;
 }
 
-/* BOTONES */
-.estudio-btns {
-    text-align: center;
-    margin-top: 80px;
-}
-
-.btn-main {
-    background: linear-gradient(135deg, #10b981, #059669);
-    padding: 14px 30px;
-    border-radius: 40px;
-    margin: 10px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-outline {
-    border: 1px solid #d4af37;
-    padding: 14px 30px;
-    border-radius: 40px;
-    margin: 10px;
-    display: inline-block;
-    transition: 0.3s;
-}
-
-.btn-main:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(16,185,129,0.5);
-}
-
-.btn-outline:hover {
-    transform: scale(1.05);
-    background: rgba(212,175,55,0.1);
+/* FOOTER */
+.footer{
+text-align:center;
+padding:40px;
+border-top:1px solid rgba(212,175,55,.2);
 }
 
 </style>
@@ -119,96 +174,105 @@ video {
 <body>
 
 <!-- NAV -->
-<nav style="position:fixed; top:20px; right:20px;">
+<nav>
+<div>
+<img src="img/LogoV2.png" style="height:30px;">
+</div>
+
+<div>
 <a href="index.html">Inicio</a>
 <a href="resto.html">Restaurante</a>
 <a href="museo.html">Museo</a>
-<a href="estudio.html" style="color:#00c2a8;">Estudio</a>
+<a href="nosotros.html">Nosotros</a>
+<a href="estudio.html" class="active">Estudio</a>
+</div>
 </nav>
 
 <!-- HERO -->
-<section class="estudio-hero">
-<h1>Patagonia 360</h1>
-<p>ESTUDIO DE IMÁGENES</p>
+<section class="hero">
 
-<h2 style="margin-top:30px;">
-Producción visual, tecnología 3D y experiencias inmersivas
+<img src="img/LogoV2.png" class="hero-logo">
+
+<h1 class="brand-title">Patagonia 360</h1>
+<p class="brand-sub">Estudio de Imágenes</p>
+
+<h2 class="hero-title">
+Producción audiovisual, drones y experiencias 3D
 </h2>
+
 </section>
 
-<!-- GRID PRINCIPAL -->
-<section class="estudio-section">
+<!-- SERVICIOS -->
+<section class="section">
 
-<div class="estudio-grid">
+<div class="grid">
 
-<!-- INMOBILIARIA -->
-<div class="estudio-card">
-
-<h3 class="estudio-title">Desarrollos inmobiliarios</h3>
-<p class="estudio-sub">
-Visualización, drone, 360 y contenido para proyectos
-</p>
+<!-- INMO -->
+<div class="card">
+<h3>Desarrollos inmobiliarios</h3>
+<p>Contenido visual, drones, renders y 360 para proyectos</p>
 
 <div class="video-box">
 <video autoplay muted loop playsinline>
-<source src="videos/clip-inmo1.mp4" type="video/mp4">
+<source src="videos/clip-inmo1.mp4">
 </video>
 </div>
-
 </div>
 
 <!-- TURISMO -->
-<div class="estudio-card">
-
-<h3 class="estudio-title">Turismo y destinos</h3>
-<p class="estudio-sub">
-Experiencias visuales en paisajes y actividades
-</p>
+<div class="card">
+<h3>Turismo y experiencias</h3>
+<p>Producción visual en entornos naturales y actividades</p>
 
 <div class="video-box">
 <video autoplay muted loop playsinline>
-<source src="videos/viajes y bicicleta1.mp4" type="video/mp4">
+<source src="videos/viajes y bicicleta1.mp4">
 </video>
 </div>
-
 </div>
 
 <!-- MARCAS -->
-<div class="estudio-card">
-
-<h3 class="estudio-title">Marcas y contenido</h3>
-<p class="estudio-sub">
-Producción audiovisual para campañas y branding
-</p>
+<div class="card">
+<h3>Marcas y contenido</h3>
+<p>Campañas, moda, branding y contenido digital</p>
 
 <div class="video-box">
 <video autoplay muted loop playsinline>
-<source src="videos/demo-render.mp4" type="video/mp4">
+<source src="videos/demo-render.mp4">
 </video>
 </div>
-
 </div>
 
 </div>
 
 </section>
 
-<!-- CTA -->
-<div class="estudio-btns">
+<!-- LINKS -->
+<div class="links">
 
-<a href="resto.html" class="btn-main">
-🍔 Ver experiencia gastronómica
+<a href="resto.html" class="btn btn-main">
+🍔 Experiencia gastronómica
 </a>
 
-<a href="museo.html" class="btn-outline">
-🏛 Ver experiencia museo
+<a href="museo.html" class="btn btn-outline">
+🏛 Experiencia museo
 </a>
 
-<a href="nosotros.html" class="btn-outline">
-🔍 Sobre Patagonia 360
+<a href="nosotros.html" class="btn btn-outline">
+🔍 Sobre nosotros
 </a>
 
 </div>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+<img src="img/logoMed.png" style="width:60px; margin-bottom:15px;">
+
+<p>Patagonia 360 – Estudio de Imágenes</p>
+<p style="opacity:.6;">Bariloche | Argentina</p>
+
+</footer>
 
 </body>
 </html>
